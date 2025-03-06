@@ -1,0 +1,47 @@
+GET http://localhost:3000/
+
+###
+GET http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzQ5NTZjOWNhMDJjMjgwYzZjZDY3ZSIsImlhdCI6MTc0MDkzNjY3MywiZXhwIjoxNzQwOTQwMjczfQ.nNgLSB7z-2vTzgnOHXskhSbtSarL-TcTExLiCxanbeI
+
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "name": "Maria",
+    "email": "maria@email.com",
+    "password": "1234"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "maria@email.com",
+    "password": "1234"
+}
+
+###
+POST http://localhost:3000/task
+Content-Type: application/json
+
+{
+    "title": "Teste 1",
+    "description": "teste no insominia",
+    "status": "pendente",
+    "deadline": "2025-03-01"
+}
+
+###
+PUT  http://localhost:3000/67c37e9d615ae92aac954ea2
+Content-Type: application/json
+
+{
+    "title": "TP Web",
+    "description": "Backend com Node",
+    "status": "pendente",
+    "deadline": "2025-03-27"
+}
